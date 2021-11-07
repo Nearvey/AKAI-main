@@ -1,0 +1,234 @@
+:root {
+    --grad-purple: #BA44FF;
+    --grad-blue: #47A2EA;
+    --light-grey: #959595;
+    --main-blue: #5952FF;
+    --main-red: #ff4949;
+    --soft-green: #66D47A;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    font-family: "Lato", "Comic Sans MS", "Comic Sans", cursive;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#bgc-wrapper {
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    z-index: -1;
+    background-image: linear-gradient(45deg, var(--grad-purple) 40%, var(--grad-blue) 60%);
+    animation: grad-rotate 10s linear infinite;
+}
+
+.gform .form-elements #honeypot {
+    display: none;
+}
+
+.contact-form {
+    width: 25%;
+    min-width: 350px;
+    height: 75%;
+    min-height: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(231, 231, 232, .25);
+    box-shadow: 4px 4px 10px 0px rgba(66, 68, 90, .5);
+    box-sizing: border-box;
+}
+
+.form-head {
+    margin: 20 0;
+    padding: 0;
+    height: 10%;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    text-shadow: rgba(66, 68, 90, .5) 3px 3px 4px;
+    color: var(--main-blue);
+    text-align: center;
+}
+
+.gform {
+    height: 80%;
+}
+
+.gform .form-elements {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gform .form-elements .button-wrapper {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gform .form-elements .pure-group {
+    width: 75%;
+    height: 8%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.gform .form-elements .pure-group input {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    color: var(--light-grey);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 10px 0px rgba(66, 68, 90, 1);
+    transition: all .25s;
+}
+
+.gform .form-elements .pure-group input:focus {
+    box-shadow: 0px 0px 10px 0px rgba(66, 68, 90, 1);
+    transform: translate(4px, 4px);
+    outline: none;
+}
+
+.gform .form-elements .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.gform .form-elements .section span {
+    color: var(--main-blue);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.gform .form-elements .section .checkboxes {
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.gform .form-elements .section .checkboxes .check-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.gform .form-elements .section .checkboxes input[type="checkbox"] {
+    appearance: none;
+    margin: 0 10px;
+    font: inherit;
+    color: var(--white);
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.15rem solid var(--white);
+    border-radius: 0.25rem;
+    transform: translateY(0.075rem);
+    display: grid;
+    place-content: center;
+}
+
+.gform .form-elements .section .checkboxes input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-blue);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.gform .form-elements .section .checkboxes input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.button-wrapper {
+    margin: 20px 0px;
+}
+
+form button {
+    width: 38%;
+    height: 2.5rem;
+    display: block;
+    background-color: var(--soft-green);
+    border-radius: 1.25rem;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    color: var(--white);
+    font-family: inherit;
+    font-weight: 300;
+    text-align: center;
+    border: none;
+    box-shadow: 4px 4px 10px 0px rgba(66, 68, 90, 1);
+    transition: all .25s;
+}
+
+form button:hover {
+    background-color: #2d9740;
+}
+
+form button:active {
+    transform: translate(4px, 4px);
+}
+
+form button:focus {
+    border: 2px #a6c8ff solid;
+}
+
+.thankyou_message h2 {
+    margin: 0;
+    color: var(--main-blue);
+    text-align: center;
+}
+
+.gform .form-elements .pure-group .field-error {
+    border-color: var(--main-red);
+    color: var(--main-red);
+}
+
+.gform .form-elements .pure-group .field-error:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(255, 99, 71, .3);
+}
+
+.gform .form-elements .pure-group .form-error-text {
+    color: var(--main-red);
+    text-shadow: rgba(66, 68, 90, .5) 3px 3px 4px;
+}
+
+@keyframes grad-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        ;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        ;
+    }
+}

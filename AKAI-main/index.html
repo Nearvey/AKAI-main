@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Akai-logo.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>AKAI Frontend Task</title>
+</head>
+
+<body>
+    <div id="bgc-wrapper"></div>
+    <section class="contact-form">
+        <h1 class="form-head">Dołącz do nas</h1>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <form onsubmit="return false;" class="gform" method="POST" data-email="example@email.net" action="">
+
+            <div class="form-elements">
+
+                <input id="honeypot" type="text" name="honeypot" value="" />
+
+                <fieldset class="pure-group">
+                    <input id="name" type="text" name="name" placeholder="Imię" />
+                </fieldset>
+
+                <fieldset class="pure-group">
+                    <input id="lastname" type="text" name="lastname" placeholder="Nazwisko" />
+                </fieldset>
+
+                <fieldset class="pure-group">
+                    <input id="email" type="email" name="email" value="" placeholder="Email" />
+                    <span class="email-invalid" style="display:none">
+                        Adres email musi być poprawny</span>
+                </fieldset>
+
+                <fieldset class="section">
+                    <span>Sekcja</span>
+
+                    <div class="checkboxes">
+                        <div class="check-wrapper">
+                            <input type="checkbox" id="Frontend" name="Frontend" value="Frontend">
+                            <label for="Frontend">Frontend</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input type="checkbox" id="Backend" name="Backend" value="Backend">
+                            <label for="Backend">Backend</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input type="checkbox" id="Mobile" name="Mobile" value="Mobile">
+                            <label for="Mobile">Mobile</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input type="checkbox" id="Grafika" name="Grafika" value="Grafika">
+                            <label for="Grafika">Grafika</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="button-wrapper">
+                    <button class="button-success pure-button button-xlarge">
+                        <i class="fa fa-paper-plane"></i>&nbsp;Wyślij</button>
+
+                    <div class="thankyou_message" style="display:none;">
+                        <h2><span>Dziękuję</span> za skontaktowanie się z nami!
+                            Odpowiemy jak najszybciej!<br>😁</h2>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
